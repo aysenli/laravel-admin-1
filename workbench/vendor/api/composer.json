@@ -1,0 +1,25 @@
+{
+    "name": "vendor/api",
+    "description": "",
+    "authors": [
+        {
+            "name": "ChenYong",
+            "email": "cyokvip@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*",
+        "illuminate/http": "4.1.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations",
+            "src/controllers"
+        ],
+        "psr-0": {
+            "Vendor\\Api\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}

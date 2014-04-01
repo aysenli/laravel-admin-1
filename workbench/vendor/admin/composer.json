@@ -1,0 +1,24 @@
+{
+    "name": "vendor/admin",
+    "description": "",
+    "authors": [
+        {
+            "name": "ChenYong",
+            "email": "cyokvip@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations",
+            "src/controllers"
+        ],
+        "psr-0": {
+            "Vendor\\Admin\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
