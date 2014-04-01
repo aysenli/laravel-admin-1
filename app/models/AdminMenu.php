@@ -4,6 +4,7 @@ use \Eloquent;
 class AdminMenu extends Eloquent{
     protected $table = 'admin_menu';
     //protected $fillable = array('ID','Name','Path');
+    public $timestamps = false;
     private $rules = array();
     private $errors;
     
