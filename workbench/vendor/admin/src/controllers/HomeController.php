@@ -6,7 +6,7 @@ class HomeController extends Controller {
     protected $layout = 'Vendor-Admin::layouts.main';
     protected $_displayData=array();
     public function __construct(){
-        $admin_menu=new \Models\Admin_menu;
+        $admin_menu=new \Models\AdminMenu;
         $list=$admin_menu->all();;
         $list=$list->toArray();
         $Tools= new \Library\Tools;
