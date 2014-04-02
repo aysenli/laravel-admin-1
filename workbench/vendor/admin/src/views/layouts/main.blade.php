@@ -9,6 +9,7 @@
 
     <title>后台管理系统</title>
 
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
     <?php echo HTML::style('css/bootstrap.css') ;?> 
     <style>
       body {
@@ -16,8 +17,12 @@
         padding-top: 70px;
       }
     </style>
+        <?php echo HTML::script('js/ueditor/ueditor.config.js');?>
+        <?php echo HTML::script('js/ueditor/ueditor.all.js');?>
+        <?php echo HTML::script('js/ueditor/editor_api.js');?>
+        <?php echo HTML::script('js/ueditor/lang/zh-cn/zh-cn.js');?>
 
-
+        <?php echo HTML::script('js/my.js');?>
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -73,7 +78,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+
     <?php echo HTML::script('js/bootstrap.min.js') ;?> 
   </body>
 </html>
