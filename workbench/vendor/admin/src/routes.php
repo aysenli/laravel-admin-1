@@ -1,5 +1,14 @@
 <?php
-Route::get('/admin/index', 'Vendor\Admin\IndexController@Index');
+//只有登陆用户才能访问
+Route::filter('auth', function()
+{
+	if (Auth::guest()) return Redirect::guest('/admin/login/index');	
+});
+
+Route::get('/admin/login/index', 'Vendor\Admin\LoginController@Index');
+Route::post('/admin/login/index', 'Vendor\Admin\LoginController@Index');
+
+Route::get('/admin/index/index', array('before' => 'auth', 'uses' => 'Vendor\Admin\IndexController@Index'));
 
 Route::get('/admin/article/index', 'Vendor\Admin\ArticleController@Index');
 Route::get('/admin/article/add', 'Vendor\Admin\ArticleController@add');

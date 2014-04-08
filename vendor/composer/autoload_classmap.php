@@ -14,6 +14,7 @@ return array(
     'Library\\Tools' => $baseDir . '/app/library/Tools.php',
     'Library\\Tree' => $baseDir . '/app/library/Tree.php',
     'Models\\AdminMenu' => $baseDir . '/app/models/AdminMenu.php',
+    'Models\\AdminUser' => $baseDir . '/app/models/AdminUser.php',
     'Models\\Article' => $baseDir . '/app/models/Article.php',
     'Models\\ArticleCategory' => $baseDir . '/app/models/ArticleCategory.php',
     'Models\\Images' => $baseDir . '/app/models/Images.php',

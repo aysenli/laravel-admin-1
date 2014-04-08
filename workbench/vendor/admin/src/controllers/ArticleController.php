@@ -11,8 +11,7 @@ class ArticleController extends HomeController {
         //echo  URL::to('/admin/article/del');
         $displayData=$this->_displayData;
         $article=new \Models\Article;
-        $article_result=$article->orderBy('id','desc')->paginate(10);
-
+        $article_result=$article::with('ArticleCategory')->orderBy('id','desc')->paginate(10);
         $displayData['MenuList']=$displayData['MenuList'];
         $displayData['article']=$article_result;
         return View::make('Vendor-Admin::article.index')->with('displayData',$displayData);
@@ -21,6 +20,7 @@ class ArticleController extends HomeController {
         if(Input::has('title')){
             $post_all=Input::all();
             $article=new \Models\Article;
+         
             $article->title=Input::get('title');
             $article->content=Input::get('content');
             $article->article_category_id=Input::get('cat');
